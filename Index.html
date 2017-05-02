@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <script src="Js/shop.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/shop.css">
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCCUTvS9PdM8slgkH2Qha6wsGdnIb-P0xg",
+      authDomain: "games-d8300.firebaseapp.com",
+      databaseURL: "https://games-d8300.firebaseio.com",
+      projectId: "games-d8300",
+      storageBucket: "games-d8300.appspot.com",
+      messagingSenderId: "454838805578"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <input id="game" type="text" placeholder="Game">
+    <input id="year" type="text" placeholder="Year">
+    <input id="manufacturer" type="text" placeholder="Manufacturer">
+    <button id="btnSend">Send</button>
+    <button id="btnList">Show List</button>
+  </div>
+  <div>
+    <button id="btnSortGame">Sort by Game</button>
+    <button id="btnSortYear">Sort by Year</button>
+    <button id="btnSortMan">Sort by Manufacturer</button>
+    <input id="numberInput" type="text">
+    <button id="btnSortFirst">First</button>
+    <button id="btnSortLast">Last</button>
+  </div>
+  <div>
+    <table id="tableList">
+      <thead>
+       <tr>
+        <th>Game</th>
+        <th>Year</th>
+        <th>Manufacturer</th>
+        </tr>
+      </thead>
+      <tbody id="tableSort">
+      </tbody>
+
+    </table>
+  </div>
+</body>
+
+</html>
